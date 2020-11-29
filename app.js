@@ -10,11 +10,11 @@ const body = document.getElementById('body');
 //audio library
 
 var nextUp = new Audio();
-nextUp.src = "./sounds/nextup.mp3";
+nextUp.src = "sounds/nextup.mp3";
 var inSound = new Audio();
-inSound.src = "./sounds/in.mp3";
+inSound.src = "sounds/in.mp3";
 var three = new Audio();
-three.src = "./sounds/three.mp3";
+three.src = "sounds/three.mp3";
 var two = new Audio();
 two.src = "./sounds/two.mp3";
 var one = new Audio();
