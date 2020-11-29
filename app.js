@@ -120,7 +120,7 @@ document.addEventListener('keydown', event => {
             state = 'play';
             body.style.backgroundColor = 'white';
             // console.log(state);
-            startButton.style.backgroundColor = 'yellow';
+            startButton.style.backgroundColor = '#32cd32';
             startButton.innerHTML = 'Playing (spacebar)';
             startClock();
             startRest();
@@ -129,14 +129,14 @@ document.addEventListener('keydown', event => {
             
             body.style.backgroundColor = 'white';
             // console.log(state);
-            startButton.style.backgroundColor = 'yellow';
+            startButton.style.backgroundColor = '#32cd32';
             startButton.innerHTML = 'Playing (spacebar)';
             startClock();
             startTimer();
         } else if (state === 'play') {
             state = 'paused';
-            body.style.backgroundColor = 'pink';
-            startButton.style.backgroundColor = 'lightblue';
+            body.style.backgroundColor = 'lightgrey';
+            startButton.style.backgroundColor = 'red';
             startButton.innerHTML = 'Paused (spacebar)';
             // console.log(state);
         }
@@ -161,16 +161,20 @@ function displayCounter() {
 }
 
 function highlightRest() {
-    timer.style.color = 'grey';
+    timer.style.color = 'white';
+    timer.style.backgroundColor = 'grey';
     timer.style.fontSize = '1.5rem';
-    rest.style.color = 'purple';
+    rest.style.color = 'white';
+    rest.style.backgroundColor = 'purple';
     rest.style.fontSize = '2.5rem';
 }
 
 function highlightTimer() {
-    timer.style.color = 'purple';
+    timer.style.color = 'white';
+    timer.style.backgroundColor = 'purple';
     timer.style.fontSize = '2.5rem'
-    rest.style.color = 'grey';
+    rest.style.color = 'white';
+    rest.style.backgroundColor = 'grey';
     rest.style.fontSize = '1.5rem'
 }
 
