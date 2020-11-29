@@ -200,10 +200,10 @@ function resetTimer() {
 }
 
 function updateExercise() { //sets interval amount for counter
-        exerciseCounter ++;
-        displayExercise();
-        displayCounter();
-    }
+    exerciseCounter ++;
+    displayExercise();
+    displayCounter();
+}
 
 function end() {
     endBell.play();
