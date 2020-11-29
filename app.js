@@ -27,10 +27,10 @@ blip.volume = .4;
 var endBell= new Audio();
 endBell.src = "./sounds/endbell.mp3"
 endBell.volume = .4;
-var whatAWorkout= new Audio();
+var whatAWorkout = new Audio();
 whatAWorkout.src = "./sounds/whataworkout.mp3"
 var jumpingJacks = new Audio();
-jumpingJacks.src = "./sounds/jumpingJacks.mp3";
+jumpingJacks.src = "./sounds/jumpingjacks.mp3";
 var wallSits = new Audio();
 wallSits.src = "./sounds/wallsits.mp3";
 var pushups = new Audio();
@@ -82,7 +82,7 @@ let timerTensOfSeconds = 3;
 let state = 'paused'; // vs play vs over
 let workoutState = 'rest' // vs timer vs over
 
-//listener
+//click listener
 // startButton.addEventListener('click', function() {
 //     if (state === 'paused' && workoutState === 'rest') {
 //         state = 'play';
