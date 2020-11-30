@@ -19,14 +19,16 @@ var two = new Audio();
 two.src = "./sounds/two.mp3";
 var one = new Audio();
 one.src = "./sounds/one.mp3";
+
 var bell = new Audio();
-bell.src = "./sounds/bell.mp3";
+bell.src = "./sounds/bells/bell.mp3";
 var blip = new Audio();
-blip.src = "./sounds/blip.mp3"
+blip.src = "./sounds/bells/blip.mp3"
 blip.volume = .4;
 var endBell= new Audio();
-endBell.src = "./sounds/endbell.mp3"
+endBell.src = "./sounds/bells/endbell.mp3"
 endBell.volume = .4;
+
 var whatAWorkout = new Audio();
 whatAWorkout.src = "./sounds/whataworkout.mp3"
 var jumpingJacks = new Audio();
