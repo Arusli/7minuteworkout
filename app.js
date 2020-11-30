@@ -61,7 +61,7 @@ const audioArray = [jumpingJacks, wallSits, pushups, crunches, chairSteps, squat
 
 //EXERCISES (13 total)
 const exerciseArray = ['Jumping Jacks', 'Wall Sits ', 'Push-Ups', 'Crunches', 'Chair Step-Ups', 'Squats', 'Triceps Dips', 'Plank', 'High Knees', 'Lunges', 'Pushups with Rotation', 'Side Plank 1', 'Side Plank 2'];
-exerciseCounter = 0;
+exerciseCounter = 11;
 
 //clock variables (global)
 let runTime = 0;
@@ -114,7 +114,7 @@ let workoutState = 'rest' // vs timer vs over
 // })
 
 //spacebar listener
-document.addEventListener('keydown', event => {
+document.addEventListener('keyup', event => {
     if (event.code === 'Space') {
         if (state === 'paused' && workoutState === 'rest') {
             state = 'play';
@@ -126,7 +126,6 @@ document.addEventListener('keydown', event => {
             startRest();
         } else if (state === 'paused' && workoutState === 'timer') {
             state = 'play';
-            
             body.style.backgroundColor = 'white';
             // console.log(state);
             startButton.style.backgroundColor = '#32cd32';
