@@ -104,6 +104,8 @@ button:hover {
     padding: 5px;
 }
 
+
+/* adjusts for large screen */
 @media only screen and (min-width: 768px) {
     #section1 {
         width: 800px;

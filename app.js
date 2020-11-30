@@ -3,7 +3,6 @@ const clock = document.getElementById('clock');
 const rest = document.getElementById('rest');
 const timer = document.getElementById('timer');
 const exercise = document.getElementById('exercise');
-const exerciseLabel = document.getElementById('exercise-label');
 const startButton = document.getElementById('start-button');
 const body = document.getElementById('body');
 
@@ -183,10 +182,6 @@ function displayExercise() {
     exercise.innerHTML = (exerciseCounter + 1) + '. ' + exerciseSelection;
 }
 
-function displayCounter() {
-    exerciseLabel.innerHTML = 'Exercise #' + (exerciseCounter + 1) + ":"
-}
-
 function highlightRest() {
     stopColor();
     timer.style.color = 'white';
@@ -239,7 +234,6 @@ function resetTimer() {
 function updateExercise() { //sets interval amount for counter
     exerciseCounter ++;
     displayExercise();
-    displayCounter();
 }
 
 function end() {
