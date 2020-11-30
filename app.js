@@ -61,7 +61,7 @@ const audioArray = [jumpingJacks, wallSits, pushups, crunches, chairSteps, squat
 
 //EXERCISES (13 total)
 const exerciseArray = ['Jumping Jacks', 'Wall Sits ', 'Push-Ups', 'Crunches', 'Chair Step-Ups', 'Squats', 'Triceps Dips', 'Plank', 'High Knees', 'Lunges', 'Pushups with Rotation', 'Side Plank 1', 'Side Plank 2'];
-exerciseCounter = 11;
+exerciseCounter = 0;
 
 //clock variables (global)
 let runTime = 0;
