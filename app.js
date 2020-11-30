@@ -56,8 +56,48 @@ sideplanks1.src = "./sounds/sideplanks1.mp3";
 var sideplanks2 = new Audio();
 sideplanks2.src = "./sounds/sideplanks2.mp3";
 
+
+//iOS sound workaround text
+function prepareSounds() {
+    muteSounds();
+    playAllSounds();
+    setTimeout(playNextUp, 1000);
+    setTimeout(playJumpingJacks, 3000);
+    setTimeout(unmuteSounds, 5500);
+    mobileButton.removeAttribute('onclick');
+}
+
+function playNextUp() {
+    nextUp.play();
+}
+
+function playJumpingJacks() {
+    jumpingJacks.play();
+}
+
+function muteSounds() {
+    for (i=0;i<completeAudioArray.length;i++) {
+        completeAudioArray[i].muted = true;
+    }
+}
+
+function unmuteSounds() {
+    for (i=0;i<completeAudioArray.length;i++) {
+        completeAudioArray[i].muted = false;
+    }   
+}
+
+function playAllSounds() {
+    for (i=0;i<completeAudioArray.length;i++) {
+        completeAudioArray[i].play();
+    }
+}
+//
+
 //audio array
-const audioArray = [jumpingJacks, wallSits, pushups, crunches, chairSteps, squats, dips, planks, highKnees, lunges, pushupsRotation, sideplanks1, sideplanks2]
+const audioArray = [jumpingJacks, wallSits, pushups, crunches, chairSteps, squats, dips, planks, highKnees, lunges, pushupsRotation, sideplanks1, sideplanks2];
+const completeAudioArray = [inSound, three, two, one, bell, blip, endBell, whatAWorkout, wallSits, pushups, crunches, chairSteps, squats, dips, planks, highKnees, lunges, pushupsRotation, sideplanks1, sideplanks2];
+//complete minus nextUp and jumpingJacks
 
 //EXERCISES (13 total)
 const exerciseArray = ['Jumping Jacks', 'Wall Sits ', 'Pushups', 'Crunches', 'Chair Step-ups', 'Squats', 'Triceps Dips', 'Plank', 'High Knees', 'Lunges', 'Pushups with Rotation', 'Side Plank 1', 'Side Plank 2'];
