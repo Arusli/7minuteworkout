@@ -5,6 +5,7 @@ const timer = document.getElementById('timer');
 const exercise = document.getElementById('exercise');
 const startButton = document.getElementById('start-button');
 const body = document.getElementById('body');
+const mobileButton = document.getElementById('mobile-only-button');
 
 //audio library
 
@@ -85,35 +86,32 @@ let state = 'paused'; // vs play vs over
 let workoutState = 'rest' // vs timer vs over
 
 //click listener
-// startButton.addEventListener('click', function() {
-//     if (state === 'paused' && workoutState === 'rest') {
-//         state = 'play';
-//         body.style.backgroundColor = 'white';
-//         // console.log(state);
-//         startButton.style.backgroundColor = 'yellow';
-//         startButton.innerHTML = 'Playing';
-//         startClock();
-//         startRest();
-//     } else if (state === 'paused' && workoutState === 'timer') {
-//         state = 'play';
-//         body.style.backgroundColor = 'white';
-//         // console.log(state);
-//         startButton.style.backgroundColor = 'yellow';
-//         startButton.innerHTML = 'Playing';
-//         startClock();
-//         startTimer();
-//     } else if (state === 'play') {
-//         state = 'paused';
-//         body.style.backgroundColor = 'pink';
-//         startButton.style.backgroundColor = 'lightblue';
-//         startButton.innerHTML = 'Paused';
-//         // console.log(state);
-//     }
+mobileButton.addEventListener('click', function() {
+    if (state === 'paused' && workoutState === 'rest') {
+        state = 'play';
+        body.style.backgroundColor = 'white';
+        mobileButton.style.backgroundColor = '#32cd32';
+        mobileButton.innerHTML = 'Playing';
+        startClock();
+        startRest();
+    } else if (state === 'paused' && workoutState === 'timer') {
+        state = 'play';
+        body.style.backgroundColor = 'white';
+        mobileButton.style.backgroundColor = '#32cd32';
+        mobileButton.innerHTML = 'Playing';
+        startClock();
+        startTimer();
+    } else if (state === 'play') {
+        state = 'paused';
+        body.style.backgroundColor = 'lightgrey';
+        mobileButton.style.backgroundColor = 'red';
+        mobileButton.innerHTML = 'Paused';
+    }
 //     //I noticed that when i pause the clock the numbers keep going for 1 more second.
 //     //I believe this is because even though I clear the interval, the current interval iteration
 //     //still completes. Can I fix this buy moving the display change to before clear interval?
 //     //No it didnt seem to work. Maybe I could make the display time function separate from time changing function.
-// })
+})
 
 //spacebar listener
 document.addEventListener('keyup', event => {
