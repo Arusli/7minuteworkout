@@ -192,9 +192,11 @@ function highlightRest() {
     timer.style.color = 'white';
     timer.style.backgroundColor = 'grey';
     timer.style.fontSize = '1.5rem';
+    timer.style.flex = '1';
     rest.style.color = 'white';
     rest.style.backgroundColor = 'purple';
     rest.style.fontSize = '2.5rem';
+    rest.style.flex = '2';
 }
 
 function highlightTimer() {
@@ -202,9 +204,11 @@ function highlightTimer() {
     timer.style.color = 'white';
     timer.style.backgroundColor = 'purple';
     timer.style.fontSize = '2.5rem'
+    timer.style.flex = '2'
     rest.style.color = 'white';
     rest.style.backgroundColor = 'grey';
     rest.style.fontSize = '1.5rem'
+    rest.style.flex = '1';
 }
 
 function displayRest() {
