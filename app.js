@@ -63,8 +63,8 @@ sideplanks2.src = "./sounds/sideplanks2.mp3";
 function prepareSounds() {
     muteSounds();
     playAllSounds();
-    setTimeout(playNextUp, 1000);
-    setTimeout(playJumpingJacks, 3000);
+    nextUp.play();
+    setTimeout(playJumpingJacks, 2500);
     setTimeout(unmuteSounds, 5500);
     mobileButton.removeAttribute('onclick');
 }
