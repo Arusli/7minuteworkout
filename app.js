@@ -60,7 +60,7 @@ sideplanks2.src = "./sounds/sideplanks2.mp3";
 const audioArray = [jumpingJacks, wallSits, pushups, crunches, chairSteps, squats, dips, planks, highKnees, lunges, pushupsRotation, sideplanks1, sideplanks2]
 
 //EXERCISES (13 total)
-const exerciseArray = ['Jumping Jacks', 'Wall Sits ', 'Push-Ups', 'Crunches', 'Chair Step-Ups', 'Squats', 'Triceps Dips', 'Plank', 'High Knees', 'Lunges', 'Pushups with Rotation', 'Side Plank 1', 'Side Plank 2'];
+const exerciseArray = ['Jumping Jacks', 'Wall Sits ', 'Pushups', 'Crunches', 'Chair Step-ups', 'Squats', 'Triceps Dips', 'Plank', 'High Knees', 'Lunges', 'Pushups with Rotation', 'Side Plank 1', 'Side Plank 2'];
 exerciseCounter = 0;
 
 //clock variables (global)
@@ -180,7 +180,7 @@ function stopColor() {
 //exercises
 function displayExercise() {
     exerciseSelection = exerciseArray[exerciseCounter];
-    exercise.innerHTML = exerciseSelection;
+    exercise.innerHTML = (exerciseCounter + 1) + '. ' + exerciseSelection;
 }
 
 function displayCounter() {
