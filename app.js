@@ -309,17 +309,21 @@ function startRest() {
             inSound.play();
         }
         if (restSeconds === 3 && restTensOfSeconds === 0) {
+            blip.play();//test
             three.play();
         }
         if (restSeconds === 2 && restTensOfSeconds === 0) {
+            blip.play();//test
             two.play();
         }
         if (restSeconds === 1 && restTensOfSeconds === 0) {
+            blip.play();//test
             one.play();
         }
 
         if (restSeconds <= 0 && restTensOfSeconds <= 0) {
             clearInterval(restInterval);
+            three.play(); //test
             bell.play();
             resetTimer();
             startTimer();
