@@ -106,7 +106,7 @@ button:hover {
 
 
 /* adjusts for large screen */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 799px) {
     #section1 {
         width: 800px;
     }
@@ -114,5 +114,25 @@ button:hover {
         margin-top: 50px;
         margin-bottom: 50px;
         font-size: 4.5rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #section1 {
+        flex-direction: column;
+        width: 100vw;
+    }
+    #exercise {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 2.5rem;
+    }
+    #rest {
+        width: 100vw;
+        height: 40px;
+    }
+    #timer {
+        width: 100vw;
+        height: 40px;
     }
 }
