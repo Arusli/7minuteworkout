@@ -16,7 +16,7 @@ h1 {
 }
 
 #section1 {
-    width: 800px;
+    width: 100vw;
     margin-right: auto;
     margin-left: auto;
     height: 180px;
@@ -54,21 +54,15 @@ h1 {
     height: 86px;
 }
 
-
-
 #section2 {
     text-align: center;
 }
 
-#exercise-label {
-    display: none;
-    margin-top: 20px;
-}
 
 #exercise {
     margin-top: 10px;
     color: purple;
-    font-size: 4rem;
+    font-size: 3rem;
     transition: color .4s;
 }
 
@@ -108,4 +102,15 @@ button:hover {
     margin-top: 0;
     margin-right: 10px;
     padding: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+    #section1 {
+        width: 800px;
+    }
+    #exercise {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 4.5rem;
+    }
 }
