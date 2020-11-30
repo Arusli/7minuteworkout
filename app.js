@@ -77,6 +77,9 @@ let restTensOfSeconds = 1;
 let timerSeconds = 0;
 let timerTensOfSeconds = 3;
 
+//color
+const alphabet = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 'a', 'b', 'c', 'd', 'e', 'f'];
+let colorize;
 
 //STATE Variables
 let state = 'paused'; // vs play vs over
@@ -126,6 +129,7 @@ document.addEventListener('keyup', event => {
             startRest();
         } else if (state === 'paused' && workoutState === 'timer') {
             state = 'play';
+            startColor();
             body.style.backgroundColor = 'white';
             // console.log(state);
             startButton.style.backgroundColor = '#32cd32';
@@ -134,6 +138,7 @@ document.addEventListener('keyup', event => {
             startTimer();
         } else if (state === 'play') {
             state = 'paused';
+            stopColor();
             body.style.backgroundColor = 'lightgrey';
             startButton.style.backgroundColor = 'red';
             startButton.innerHTML = 'Paused (spacebar)';
@@ -147,7 +152,30 @@ document.addEventListener('keyup', event => {
 
 
 
+
+
 //FUNCTIONS
+
+//coloring
+
+function generateHexcolor() {
+    let color = '#';
+    let randomInt = function() {
+        return Math.floor(Math.random() * 16)
+    }
+    for (i = 0; i<6; i++) {
+        color += alphabet[randomInt()];
+    }
+    exercise.style.color = color;
+}
+
+function startColor() {
+    colorize = setInterval(generateHexcolor, 250);
+}
+
+function stopColor() {
+    clearInterval(colorize);
+}
 
 //exercises
 function displayExercise() {
@@ -160,6 +188,7 @@ function displayCounter() {
 }
 
 function highlightRest() {
+    stopColor();
     timer.style.color = 'white';
     timer.style.backgroundColor = 'grey';
     timer.style.fontSize = '1.5rem';
@@ -169,6 +198,7 @@ function highlightRest() {
 }
 
 function highlightTimer() {
+    startColor();
     timer.style.color = 'white';
     timer.style.backgroundColor = 'purple';
     timer.style.fontSize = '2.5rem'
