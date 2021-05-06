@@ -35,7 +35,7 @@ h1 {
     color: white;
     border: none;
     padding: 1.25rem;
-    background-color: purple;
+    background-color: cornflowerblue;
     transition: font-size .8s, flex .8s;
     height: 86px;   
 }
