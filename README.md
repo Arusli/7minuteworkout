@@ -1,1 +1,1 @@
-This is tetris.
+7-minute workout, by A Rusli.
